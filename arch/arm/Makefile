@@ -317,7 +317,9 @@ else
 ifeq ($(CONFIG_ARCH_MSM8929),y)
 	$(Q)$(MAKE) $(build)=$(boot)/dts/samsung/msm8929 MACHINE=$(MACHINE) dtbs
 else
+ifeq ($(CONFIG_ARCH_MSM8916),y)
 	$(Q)$(MAKE) $(build)=$(boot)/dts/samsung/msm8916 MACHINE=$(MACHINE) dtbs
+endif
 endif
 endif
 zImage-dtb: vmlinux scripts dtbs

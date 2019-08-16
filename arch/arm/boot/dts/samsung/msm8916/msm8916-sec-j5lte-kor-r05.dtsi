@@ -11,11 +11,12 @@
  */
 
 #include "msm8916.dtsi"
-#include "msm8916-pinctrl-sec-j5nlte-eur-r05.dtsi"
+#include "msm8916-pinctrl-sec-j5lte-kor-r05.dtsi"
 //#include "dsi_panel_hx8389c_tft_qhd_video.dtsi"
 #include "msm8916-camera.dtsi"
 #include "msm8916-camera-sensor-cdp-j5-r00.dtsi"
 #include "msm8916-sec-j5-battery-r00.dtsi"
+#include "msm8916-sec-j5lte-kor-tdmb-r01.dtsi"
 #include "../../../../../../drivers/video/msm/mdss/samsung/S6D7AA0X62_BV050HDM/dsi_panel_S6D7AA0X62_BV050HDM_hd_5_0_video.dtsi"
 #include "../../../../../../drivers/video/msm/mdss/samsung/S6E8AA5X01_AMS497HY01/dsi_panel_S6E8AA5X01_AMS497HY01_hd_octa_video.dtsi"
 / {
@@ -69,7 +70,7 @@
 			imagis,ic-version = "ist3038c";
 			imagis,project-name = "j5_octa";
 			imagis,tkey = <1>;
-			imagis,octa-hw = <1>;
+		        imagis,octa-hw = <1>;
 		};
 	};
 
@@ -458,7 +459,6 @@
 	qcom,hsusb-otg-phy-init-seq =
 					<0x19 0x81 0x0b 0x82 0xffffffff>;
 };
-
 &rpm_bus {
 	rpm-regulator-ldoa17 {
 		status = "okay";
@@ -470,7 +470,6 @@
 		};
 	};
 };
-
 &sdhc_1 {
 	vdd-supply = <&pm8916_l8>;
 	qcom,vdd-always-on;
